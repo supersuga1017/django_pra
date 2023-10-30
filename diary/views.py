@@ -5,14 +5,21 @@ from django.views import generic
 from django.urls import reverse_lazy
 from django.contrib import  messages
 from .forms import InquiryForm
+<<<<<<< HEAD
 from .forms import DiaryCreateForm
 from .forms import SugaForm
 from .models import Diary
+=======
+>>>>>>> ce8f1603a7b4955e9d1ec2996b6376a5e5e36052
 
 import logging
 
 logger = logging.getLogger(__name__)
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ce8f1603a7b4955e9d1ec2996b6376a5e5e36052
 class IndexView(generic.TemplateView):
     template_name = "index.html"
 
@@ -28,6 +35,7 @@ class InquiryView(generic.FormView):
         messages.success(self.request,'お問い合わせが完了しました。')
         return super().form_valid(form)
 
+<<<<<<< HEAD
 class SugaInquiryView(generic.FormView):
     template_name = "suga_inquiry.html"
     form_class = SugaForm
@@ -63,6 +71,20 @@ class DiaryCreateView(generic.CreateView):
     template_name = 'diary_create.html'
     form_class = DiaryCreateForm
     success_url = reverse_lazy('diary:diary-list')
+=======
+class SugaView(generic.TemplateView):
+    template_name = "suga.html"
+
+class DiaryListView(generic.TemplateView):
+    # model = Diary
+    template_name = "diary_list.html"
+    # paginnate_by = 2
+
+    def get_queryset(self):
+        diaries = Diary.objects.filter(user = self.request.user).order_by('created_at')
+        return diaries
+
+>>>>>>> ce8f1603a7b4955e9d1ec2996b6376a5e5e36052
 
 
 

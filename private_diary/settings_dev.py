@@ -49,5 +49,8 @@ LOGGING = {
         },
     }
 }
+<<<<<<< HEAD
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+=======
+>>>>>>> ce8f1603a7b4955e9d1ec2996b6376a5e5e36052

@@ -2,7 +2,10 @@ import os
 
 from django import forms
 from django.core.mail import EmailMessage
+<<<<<<< HEAD
 from .models import Diary
+=======
+>>>>>>> ce8f1603a7b4955e9d1ec2996b6376a5e5e36052
 
 class InquiryForm(forms.Form):
     name = forms.CharField(label='お名前',max_length=30)
@@ -47,6 +50,7 @@ class InquiryForm(forms.Form):
         ]
 
         message = EmailMessage(subject= subject,body=message,from_email=from_email,to=to_list,cc=cc_list)
+<<<<<<< HEAD
         message.send()
 
 
@@ -109,3 +113,6 @@ class DiaryCreateForm(forms.ModelForm):
 
 
 
+=======
+        message.send()
+>>>>>>> ce8f1603a7b4955e9d1ec2996b6376a5e5e36052

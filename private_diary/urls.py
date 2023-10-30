@@ -15,9 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+<<<<<<< HEAD
 from django.urls import path,include
 from django.contrib.staticfiles.urls import static
 
+=======
+from django.urls import path
+>>>>>>> ce8f1603a7b4955e9d1ec2996b6376a5e5e36052
 
 
 from django.urls import path,include
@@ -25,14 +29,22 @@ from django.urls import path,include
 from django.contrib import admin
 from django.urls import path,include
 
+<<<<<<< HEAD
 from . import settings_common,settings_dev
 
+=======
+>>>>>>> ce8f1603a7b4955e9d1ec2996b6376a5e5e36052
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('diary.urls')),
 
+<<<<<<< HEAD
     path('accounts/', include('allauth.urls')),
 ]
 
 # 開発サーバーでメディアを配信できるように設定
 urlpatterns += static(settings_common.MEDIA_URL,document_root = settings_dev.MEDIA_ROOT)
+=======
+    # path('accounts/', include('allauth.urls')),
+]
+>>>>>>> ce8f1603a7b4955e9d1ec2996b6376a5e5e36052

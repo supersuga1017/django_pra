@@ -18,6 +18,10 @@ from django.contrib.messages import  constants as messages
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ce8f1603a7b4955e9d1ec2996b6376a5e5e36052
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -81,6 +85,7 @@ WSGI_APPLICATION = 'private_diary.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+<<<<<<< HEAD
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -97,6 +102,12 @@ DATABASES = {
         'PASSWORD': os.environ.get('DB_PASSWORD'),
         'HOST': '',
         'PORT': '',
+=======
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+>>>>>>> ce8f1603a7b4955e9d1ec2996b6376a5e5e36052
     }
 }
 
@@ -106,7 +117,21 @@ STATICFILES_DIRS=(
 
 # import os
 
+<<<<<<< HEAD
 
+=======
+# データベース設定
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'private_diary',
+#         'USER': os.environ.get('DB_USER'),
+#         'PASSWORD': os.environ.get('DB_PASSWORD'),
+#         'HOST': '',
+#         'PORT': '',
+#     }
+# }
+>>>>>>> ce8f1603a7b4955e9d1ec2996b6376a5e5e36052
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -191,12 +216,18 @@ LOGGING = {
     }
 }
 
+<<<<<<< HEAD
 # AUTH_USER_MODEL = 'accounts.CustomUser'
+=======
+
+# AUTH_USER_MODEL = 'accounts.Customer'
+>>>>>>> ce8f1603a7b4955e9d1ec2996b6376a5e5e36052
 MESSAGE_TAGS = {
     messages.ERROR:'alert alert-denger',
     messages.WARNING:'alert alert-warning',
     messages.SUCCESS:'alert alert-success',
     messages.INFO:'alert alert-info',
+<<<<<<< HEAD
 }
 
 MEDIA_URL = '/media/'
@@ -235,3 +266,6 @@ BACKUP_PATH = 'backup/'
 NUM_SAVED_BACKUP = 30
 
 
+=======
+}
+>>>>>>> ce8f1603a7b4955e9d1ec2996b6376a5e5e36052
